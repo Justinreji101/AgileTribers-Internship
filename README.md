@@ -1,1 +1,1 @@
-# AgileTribers-Interndhip
+# AgileTribers-Internship
