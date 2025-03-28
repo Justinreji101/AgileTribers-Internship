@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>Combining Colspan and Rowspan</title>
+    <style>
+        body {
+            font-family: Times New Roman , serif;
+        }
+        table {
+            width: 32%;
+            margin: 10px auto;
+            border: 1px solid #333;
+        }
+        th {
+            padding: 10px;
+            text-align:center;
+            border: 1px solid #000;
+        }
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Combining Colspan and Rowspan</h2>
+<table border = "1">
+    <thead>
+        <tr>
+            <tr>
+            <th colspan="2" rowspan="2">Header (spans 2 columns and 2 rows)</th>
+            <td>Data</td>
+            </tr>
+            <tr>
+            <td>Data</td>
+    </tr>
+</thead>
+<tbody>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
