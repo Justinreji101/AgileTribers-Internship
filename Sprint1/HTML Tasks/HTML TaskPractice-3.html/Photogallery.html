@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Times new roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .hr-with-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hr-with-text::before,
+        .hr-with-text::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #000;
+        }
+
+        .hr-with-text span {
+            padding: 0 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .photo-gallery {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome UI Photo Gallery</h1>
+        <hr>
+        <div class="hr-with-text">
+        <span>Welcome UI Photo Gallery</span>
+    </div>
+        <div class="photo-gallery">
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b" alt="Mountain landscape">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" alt="Forest with sunlight">
+            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" alt="Waterfall in the jungle">
+        </div>
+        <center><p>“On the top of mountains and beneath the stars, find your peace.” “Life is short, climb the mountains.” “Climbing my way to serenity.” “The earth has music for those who listen in the mountains.”</p></center>
+        <hr>
+        <div class="gallery-description">
+            <h2>About This Gallery</h2>
+            <p>
+                This gallery <b>showcases</b> the awe-inspiring beauty of nature, from towering mountains to serene forests and <strong>cascading waterfalls</strong>. Each image captures a unique moment in time, reminding us of the importance of preserving our planet's natural wonders. Whether you're an avid hiker, a nature photographer, or simply someone who appreciates the outdoors, these images are sure to inspire and uplift.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <center><p>&copy; 2023 Nature's Beauty Photo Gallery. All rights reserved.</p></center>    
+    </footer>
+</body>
+</html>
