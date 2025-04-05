@@ -1,0 +1,80 @@
+body {
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    width: 100%;
+    background-color: lightgrey;
+}
+.header {
+    align-items: center;
+  padding: 6px;
+  height: 50%;
+  width: 90%;
+  text-align: Left;
+  background: #4c9c8a;
+  color: white;
+  font-size: 9px;
+}
+.container  {
+    margin: auto;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    box-align: center;
+    text-align: center;
+    display: grid;
+    height: 400px;
+}
+.container > div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.header2 {
+    background-color: #00e4c5;
+    width: 100%;
+    justify-content: center;
+    grid-column: span 10;
+    grid-row: span 4;
+}
+
+.Intro {
+    background-color: #00e4c5;
+    grid-column: span 6;
+    grid-row: span 9;
+}
+
+.Hero {
+    background-color: #00e4c5;
+    grid-column: span 4;
+    grid-row: span 6;
+}
+
+.Call1 {
+    background-color: #FFFF00;
+    grid-column: span 4;
+    grid-row: span 3;
+}
+
+.Features {
+    background-color: #00e4c5;
+    grid-column: span 10;
+    grid-row: span 4;
+}
+.More {
+    background-color: #00e4c5;
+    grid-column: span 6;
+    grid-row: span 4;
+}
+.Call2 {
+    background-color: #FFFF00;
+    grid-column: span 4;
+    grid-row: span 4;
+}
+
+.footer {
+    background-color: #00e4c5;
+    width: 900px;
+    grid-column: span 10;
+    grid-row: span 2;
+}

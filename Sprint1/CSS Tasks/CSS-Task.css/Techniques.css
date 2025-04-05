@@ -1,0 +1,42 @@
+body {
+            background-color: #969696; /* Tailwind's gray-200 */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header{
+            background-color: #1f2937; /* Tailwind's gray-800 */
+            color: white;
+            text-align: center;
+            padding: 60px;
+        }
+        .nav {
+            background-color: #4b5563;
+            color: white;
+            margin-top: 5px;
+            text-align: center;
+            padding: 10px;
+        }
+        .slideshow {
+            background-color: #374151; /* Tailwind's gray-700 */
+            color: white;
+            text-align: center;
+            padding: 64px ;
+            margin: 19px 10px;
+            width: 1210px;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .content div {
+            background-color: white;
+            width: 30%;
+            height: 210px   
+        }
+        .footer{
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 16px;
