@@ -1,0 +1,23 @@
+body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0f7fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        table {
+            width: 80%;
+            height: 60%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 10px solid #0288d1;
+            padding: 20px;
+            text-align: center;
+            background-color: #e0f7fa;
+        }
+        td:hover {
+            background-color: #b3e5fc;
+        }
