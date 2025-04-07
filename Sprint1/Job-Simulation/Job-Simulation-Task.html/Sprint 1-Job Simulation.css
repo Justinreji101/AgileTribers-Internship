@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: 'Times new roman', sans-serif;
+    background-image: linear-gradient(to right, white, lightblue);
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14297c;
+    padding: 25px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a.active {
+    color: #ffcc00;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.welcome {
+    margin-bottom: 40px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+article {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box -shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+footer {
+    background-color: #14297c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #ffcc00;
+}
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #004080;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 90%;
+    }
+}
