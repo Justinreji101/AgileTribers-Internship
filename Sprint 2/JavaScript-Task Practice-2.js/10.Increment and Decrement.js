@@ -1,0 +1,10 @@
+let count = 10;
+console.log(`Initial value: ${count}`);
+count++;
+console.log(`After incrementing: ${count}`);
+count--;
+console.log(`After decrementing: ${count}`);
+count++;
+console.log(`After incrementing again: ${count}`);
+count--;
+console.log(`After decrementing again: ${count}`);
