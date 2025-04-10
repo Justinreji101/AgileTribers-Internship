@@ -1,0 +1,15 @@
+let name = "Justin Reji"; 
+let age = 21; 
+let dob = "2003-09-04";
+let height = 5.6;
+let weight = 101.41;
+let degree = "Bachelor of Science in Computer Science"; 
+let gender = "Male"; 
+console.log("Personal Details:");
+console.log("Name: " + name);
+console.log("Age: " + age);
+console.log("Date of Birth: " + dob);
+console.log("Height: " + height + " feet");
+console.log("Weight: " + weight + " pounds");
+console.log("Degree: " + degree);
+console.log("Gender: " + gender);
