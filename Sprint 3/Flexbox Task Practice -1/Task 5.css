@@ -1,0 +1,46 @@
+body {
+    background-color: #f7fafc;
+    text-align: center;
+}
+
+.header {
+    background-color: #e2e8f0;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.navigation {
+    background-color: #e2e8f0;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+.navigation nav a {
+    margin: 0 1rem;
+}
+
+.feature {
+    background-color: #e2e8f0;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.flex-container > div {
+  background-color: #e2e8f0;
+  width: 500px;
+  margin: 5px;
+  padding: 70px;
+  text-align: revert-layer;
+  line-height: 70px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: #e2e8f0;
+    padding: 2rem 0;
+    text-align: center;
+}

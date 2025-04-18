@@ -1,0 +1,39 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background-color: #fbcfe8;
+    height: 60px;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #cb02dd;
+    text-align: center;
+    padding: 1px;
+    color: white;
+}
+
+main {
+    background-color: white;
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #d8b4fe;
+    height: 40px;
+    text-align: center;
+    padding: 20px;
+}

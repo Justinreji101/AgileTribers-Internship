@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: orange;
+    text-align: center;
+    color: white;
+    padding: 30px 0;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+nav {
+    background-color: blue;
+    text-align: center;
+    color: white;
+    flex: 0 0 25%;
+    padding: 5px;
+}
+
+article {
+    background-color: green;
+    color: white;
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: brown;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
