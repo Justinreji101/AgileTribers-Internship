@@ -1,0 +1,108 @@
+body {
+      background-color: white;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      max-width: 480px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .container {
+      border: 1px solid #d1d5db;
+      width: 400px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+    }
+    .flex-center {
+      justify-content: center;
+    }
+    .flex-start {
+      justify-content: flex-start;
+    }
+    .flex-end {
+      justify-content: flex-end;
+    }
+    .box-group {
+      background-color: #86efac;
+      height: 40px;
+      display: flex;
+    }
+    .box {
+      background-color: #86efac;
+      border: 1px solid #22c55e;
+      height: 40px;
+    }
+    .box-joined {
+      position: relative;
+      display: flex;
+      border: 1px solid #22c55e;
+      background-color: #86efac;
+      height: 40px;
+    }
+    .box-joined::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 50%;
+      border-right: 1px solid #22c55e;
+    }
+    .first-container .box-group {
+      width: 380px;
+      display: flex;
+    }
+    .first-container .box {
+      flex: 1;
+      border-right: none;
+    }
+    .second-container {
+      justify-content: center;
+      gap: 28px;
+    }
+    .second-container .box {
+      width: 72px;
+      flex-shrink: 0;
+    }
+    .third-container {
+      justify-content: center;
+      gap: 28px;
+    }
+    .third-container .box-joined {
+      width: 144px;
+      flex-shrink: 0;
+    }
+    .third-container .box {
+      width: 72px;
+      flex-shrink: 0;
+    }
+    .fourth-container {
+      justify-content: center;
+      gap: 28px;
+    }
+    .fourth-container .box {
+      width: 72px;
+      flex-shrink: 0;
+    }
+    .fourth-container .box-joined {
+      width: 144px;
+      flex-shrink: 0;
+    }
+    .fifth-container {
+      justify-content: center;
+      gap: 28px;
+    }
+    .fifth-container .box-joined {
+      width: 144px;
+      flex-shrink: 0;
+    }
+    .fifth-container .box {
+      width: 72px;
+      flex-shrink: 0;
+      justify-content: center;
+    }

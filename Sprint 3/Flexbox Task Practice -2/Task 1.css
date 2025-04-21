@@ -1,0 +1,112 @@
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      padding: 1.5rem;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: 100%;
+    }
+    .header {
+      background-color: #38bdf8;
+      color: white;
+      height: 40px;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 0.25rem 0;
+    }
+    .top-section {
+      display: flex;
+      gap: 0.25rem;
+    }
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: 33.3333%;
+    }
+    .hero {
+      background-color: #c4b5fd;
+      color: white;
+      height: 70px;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    .sidebar {
+      background-color: #86bb71;
+      color: white;
+      height: 90px;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1.5rem 0;
+      flex-grow: 1;
+    }
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: 66.6667%;
+    }
+    .main-content {
+      background-color: #fbbf24;
+      color: #fef3c7;
+      height: 120px;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1.5rem 0.5rem;
+    }
+    .main-content strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .main-content p {
+      margin: 0;
+      font-size: 0.5rem;
+      line-height: 1.1;
+    }
+    .extra-content {
+      background-color: #4b5563;
+      color: white;
+      height: 45px;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    .middle-section {
+      display: flex;
+      gap: 0.25rem;
+      margin-top: 0.25rem;
+    }
+    .related-images {
+      background-color: #059669;
+      color: white;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1.5rem 0;
+      width: 66.6667%;
+    }
+    .related-posts {
+      background-color: #f9a8d4;
+      color: white;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1.5rem 0;
+      width: 33.3333%;
+    }
+    .footer {
+      background-color: #f97316;
+      color: white;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 0.5rem 0;
+      margin-top: 0.15rem;
+    }
