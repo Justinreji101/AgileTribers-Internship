@@ -1,0 +1,230 @@
+.flight-icon {
+    font-size: 24px;
+    color: #0066cc;
+    margin: 0 15px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+}
+
+.flight-icon:hover {
+    animation: fly 1.5s infinite;
+}
+
+@keyframes fly {
+    0% { transform: rotate(45deg) translateX(0); }
+    50% { transform: rotate(45deg) translateX(10px); }
+    100% { transform: rotate(45deg) translateX(0); }
+}
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e5799, #207cca);
+    margin: 0;
+    padding: 20px;
+}
+
+.boarding-pass {
+    width: 1300px;
+    height: 450px;
+    background: url('https://images.ctfassets.net/pdf29us7flmy/5ExZrNddyjKlFVC4oJWpci/d52b2225f0bf3342779a965ea6907c2e/airplane-runway-vertical.jpg') center/cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    color: #333;
+}
+
+.boarding-pass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.left-section {
+    flex: 2;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section {
+    flex: 1;
+    background: rgba(0, 102, 204, 0.1);
+    border-left: 2px dashed rgba(0, 102, 204, 0.3);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #999;
+}
+
+.header h2 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    color: #0066cc;
+}
+
+.airline {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.passenger-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.passenger-info > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.passenger-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.passenger-info p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flight-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.airport {
+    text-align: center;
+    flex: 1;
+}
+
+.airport-code {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0066cc;
+}
+
+.airport-name {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.flight-date {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.flight-icon {
+    font-size: 24px;
+    color: #0066cc;
+    margin: 0 15px;
+}
+
+.flight-details {
+    margin-top: auto;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.detail-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+}
+
+.detail-box:last-child {
+    margin-right: 0;
+}
+
+.detail-box h3 {
+    margin: 0 0 5px 0;
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.detail-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.seat {
+    background: #0066cc;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.barcode {
+    font-family: 'Libre Barcode 128', cursive;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+.boarding-time {
+    background: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+}
