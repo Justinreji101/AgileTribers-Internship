@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Task 5.css">
+    <title>Filter Long Words</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Filter Long Words</h1>
+        <p class="description">Enter words separated by commas to filter and display only those with more than 5 letters.</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="words">Enter words (comma separated):</label>
+                <textarea id="words" placeholder="e.g. apple, banana, cherry, date, elderberry, fig, grape">apple, banana, cherry, date, elderberry, fig, grape</textarea>
+            </div>
+            <button id="filter">Filter Words</button>
+        </div>
+        
+        <div class="comparison">
+            <div class="word-list original-words">
+                <h3 class="list-title">Original Words</h3>
+                <div class="words-container" id="original-words">
+                    <!-- Words will be inserted here -->
+                </div>
+                <div class="stats">
+                    <span id="original-count">0 words</span>
+                    <span id="original-avg">Avg. length: 0</span>
+                </div>
+            </div>
+            <div class="word-list filtered-words">
+                <h3 class="list-title">Filtered Words (>5 letters)</h3>
+                <div class="words-container" id="filtered-words">
+                    <!-- Filtered words will be inserted here -->
+                </div>
+                <div class="stats">
+                    <span id="filtered-count">0 words</span>
+                    <span id="filtered-avg">Avg. length: 0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Task 5.js"></script>
+</body>
+</html>

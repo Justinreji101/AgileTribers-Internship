@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Task 9.css">
+    <title>Word Finder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Word Finder</h1>
+        <p class="description">Check if a word exists in a sentence using the includes() method</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="sentence">Enter a sentence:</label>
+                <textarea id="sentence" placeholder="e.g. The quick brown fox jumps over the lazy dog">The quick brown fox jumps over the lazy dog</textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="word">Word to find:</label>
+                <input type="text" id="word" placeholder="e.g. fox" value="fox">
+            </div>
+            
+            <div class="example-sentences">
+                <div class="example-btn" data-sentence="The quick brown fox jumps over the lazy dog" data-word="fox">Example 1</div>
+                <div class="example-btn" data-sentence="Hello world, welcome to the universe" data-word="world">Example 2</div>
+                <div class="example-btn" data-sentence="JavaScript is a programming language" data-word="Python">Example 3</div>
+            </div>
+            
+            <button id="check">Check for Word</button>
+        </div>
+        
+        <div class="result-section">
+            <div class="sentence-display" id="sentence-display">
+                <!-- Highlighted sentence will appear here -->
+            </div>
+            <div id="result-container">
+                <div class="result-box word-found" id="result-box">Word Found!</div>
+            </div>
+        </div>
+    </div>
+    <script src="Task 9.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Task 10.css">
+    <title>Array Keys Explorer</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Array Keys Explorer</h1>
+        <p class="description">Enter array items to see their indices using the Array.keys() method</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="array-items">Array Items (comma separated):</label>
+                <textarea id="array-items" placeholder="e.g. apple, banana, cherry">apple, banana, cherry</textarea>
+            </div>
+            
+            <div class="example-arrays">
+                <div class="example-btn" data-items="apple, banana, cherry">Fruits</div>
+                <div class="example-btn" data-items="red, green, blue">Colors</div>
+                <div class="example-btn" data-items="dog, cat, bird, fish">Pets</div>
+                <div class="example-btn" data-items="January, February, March">Months</div>
+            </div>
+            
+            <button id="show-keys">Show Array Keys</button>
+        </div>
+        
+        <div class="array-display" id="array-display">
+            <!-- Array items with keys will be inserted here -->
+        </div>
+    </div>
+    <script src="Task 10.js"></script>
+</body>
+</html>

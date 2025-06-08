@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Task 4.css">
+    <title>Unique Numbers with Set</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Unique Numbers with Set</h1>
+        <p class="description">Enter numbers separated by commas to see how Set removes duplicates and returns only unique values.</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="numbers">Enter numbers (comma separated):</label>
+                <input type="text" id="numbers" placeholder="e.g. 1, 2, 2, 3, 4, 4, 5" value="1, 2, 2, 3, 4, 4, 5">
+            </div>
+            <button id="process">Get Unique Numbers</button>
+        </div>
+        
+        <div class="comparison">
+            <div class="array-box original-array">
+                <h3 class="array-title">Original Array</h3>
+                <div class="array-items" id="original-array">
+                    <!-- Numbers will be inserted here -->
+                </div>
+            </div>
+            <div class="array-box unique-array">
+                <h3 class="array-title">Unique Numbers</h3>
+                <div class="array-items" id="unique-array">
+                    <!-- Unique numbers will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Task 4.js"></script>
+</body>
+</html>

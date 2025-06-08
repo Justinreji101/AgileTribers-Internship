@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Task 2.css">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Spread Operator</h1>
+        <p class="description">Enter three objects in JSON format to see how the spread operator merges them into one new object.</p>
+        
+        <div class="object-inputs">
+            <div class="object-input">
+                <h3 class="object-title">Object 1</h3>
+                <textarea id="obj1" placeholder='{"a": 1, "b": 2}'>{"a": 1, "b": 2}</textarea>
+            </div>
+            <div class="object-input">
+                <h3 class="object-title">Object 2</h3>
+                <textarea id="obj2" placeholder='{"c": 3, "d": 4}'>{"c": 3, "d": 4}</textarea>
+            </div>
+            <div class="object-input">
+                <h3 class="object-title">Object 3</h3>
+                <textarea id="obj3" placeholder='{"e": 5, "f": 6}'>{"e": 5, "f": 6}</textarea>
+            </div>
+        </div>
+        
+        <button id="merge">Merge Objects</button>
+        
+        <div class="results">
+            <h3 class="result-title">Merged Object Result</h3>
+            <div class="result-value" id="merged-result">{ }</div>
+        </div>
+    </div>
+    <script src="Task 2.css"></script>
+</body>
+</html>
