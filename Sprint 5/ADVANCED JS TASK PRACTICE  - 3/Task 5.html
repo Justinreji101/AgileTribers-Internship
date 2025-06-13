@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 5 Shopping Cart Calculator</title>
+    <link rel="stylesheet" href="Task 5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping Cart Calculator</h1>
+        
+        <div class="form-group">
+            <label for="cartInput">Enter cart items (JSON format):</label>
+            <textarea id="cartInput" rows="6"></textarea>
+        </div>
+        
+        <button id="calculateButton">Calculate Total</button>
+        
+        <div class="result" id="resultContainer" style="display: none;">
+            <h3>Cart Total:</h3>
+            <div class="result-text" id="resultText"></div>
+            <div class="items-list" id="itemsList"></div>
+        </div>
+    </div>
+    
+    <script src="Task 5.js"></script>
+</body>
+</html>
