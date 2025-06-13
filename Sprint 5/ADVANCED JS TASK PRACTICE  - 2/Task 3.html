@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 3 API Data Fetcher</title>
+    <link rel="stylesheet" href="Task 3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Data Fetcher</h1>
+        
+        <div class="form-group">
+            <label for="apiUrl">API Endpoint URL:</label>
+            <input type="text" id="apiUrl" placeholder="Enter API URL">
+        </div>
+        
+        <button id="fetchButton">Fetch Data</button>
+        
+        <div class="loading" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>Fetching data...</p>
+        </div>
+        
+        <div class="result" id="resultContainer" style="display: none;">
+            <h3>API Response:</h3>
+            <pre id="resultText"></pre>
+        </div>
+    </div>
+    <script src="Task 3.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 1 String Replacement Tool</title>
+    <link rel="stylesheet" href="Task 1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>String Replacement Tool</h1>
+        
+        <div class="form-group">
+            <label for="originalString">Original String:</label>
+            <input type="text" id="originalString" placeholder="Enter the original string">
+        </div>
+        
+        <div class="form-group">
+            <label for="searchString">Substring to Replace:</label>
+            <input type="text" id="searchString" placeholder="Enter the substring to replace">
+        </div>
+        
+        <div class="form-group">
+            <label for="replacementString">Replacement String:</label>
+            <input type="text" id="replacementString" placeholder="Enter the replacement string">
+        </div>
+        
+        <button id="replaceButton">Replace All</button>
+        
+        <div class="result" id="resultContainer" style="display: none;">
+            <h3>Result:</h3>
+            <div class="result-text" id="resultText"></div>
+        </div>
+    <script src="Task 1.js"></script>
+</body>
+</html>
