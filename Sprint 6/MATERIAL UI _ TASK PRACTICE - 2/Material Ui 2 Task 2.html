@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Financial Analytics Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mui/material@5.11.0/css/material.min.css">
+  <link rel="stylesheet" type="text/css" href="Material Ui 2 Task 2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span class="material-icons" style="font-size: 2rem; margin-right: 12px; color: var(--primary);">analytics</span>
+        <h2>Analytics</h2>
+      </div>
+      <div class="sidebar-menu">
+        <div class="menu-item active">
+          <span class="material-icons">dashboard</span>
+          <span>Dashboard</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">trending_up</span>
+          <span>Stocks</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">account_balance</span>
+          <span>Portfolio</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">pie_chart</span>
+          <span>Investments</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">receipt</span>
+          <span>Transactions</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">settings</span>
+          <span>Settings</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="topbar-actions">
+          <div class="date-selector">
+            <span class="material-icons">chevron_left</span>
+            <span>Jun 2025</span>
+            <span class="material-icons">chevron_right</span>
+          </div>
+        </div>
+        <div class="user-profile">
+          <div class="user-avatar">JR</div>
+          <span>Justin Reji</span>
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="dashboard-header">
+          <h1 class="page-title">Financial Dashboard</h1>
+          <div class="view-switcher">
+            <div class="view-option active">Daily</div>
+            <div class="view-option">Weekly</div>
+            <div class="view-option">Monthly</div>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Total Balance</div>
+              <div class="stat-card-icon" style="background-color: var(--primary);">
+                <span class="material-icons">account_balance_wallet</span>
+              </div>
+            </div>
+            <div class="stat-card-value">$48,245</div>
+            <div class="stat-card-change change-up">
+              <span class="material-icons" style="font-size: 1rem;">arrow_upward</span>
+              <span>5.2% from last month</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Investment</div>
+              <div class="stat-card-icon" style="background-color: var(--accent);">
+                <span class="material-icons">trending_up</span>
+              </div>
+            </div>
+            <div class="stat-card-value">$32,780</div>
+            <div class="stat-card-change change-up">
+              <span class="material-icons" style="font-size: 1rem;">arrow_upward</span>
+              <span>8.7% from last month</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Expenses</div>
+              <div class="stat-card-icon" style="background-color: var(--error);">
+                <span class="material-icons">money_off</span>
+              </div>
+            </div>
+            <div class="stat-card-value">$2,450</div>
+            <div class="stat-card-change change-down">
+              <span class="material-icons" style="font-size: 1rem;">arrow_downward</span>
+              <span>3.1% from last month</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Savings</div>
+              <div class="stat-card-icon" style="background-color: var(--secondary);">
+                <span class="material-icons">savings</span>
+              </div>
+            </div>
+            <div class="stat-card-value">$13,015</div>
+            <div class="stat-card-change change-up">
+              <span class="material-icons" style="font-size: 1rem;">arrow_upward</span>
+              <span>2.4% from last month</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Analytics Grid -->
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <div class="card-header">
+              <div class="card-title">Portfolio Performance</div>
+              <select style="padding: 8px; border-radius: 4px; border: 1px solid #ddd; background-color: white;">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>Last 90 days</option>
+              </select>
+            </div>
+            <div class="chart-container">
+              <canvas id="performanceChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="analytics-card">
+            <div class="card-header">
+              <div class="card-title">Top Stocks</div>
+              <span class="material-icons" style="color: var(--text-secondary); cursor: pointer;">more_vert</span>
+            </div>
+            <div class="stock-list">
+              <div class="stock-item">
+                <div class="stock-info">
+                  <div class="stock-icon" style="background-color: #e8f5e9; color: var(--accent);">
+                    <span class="material-icons">show_chart</span>
+                  </div>
+                  <div>
+                    <div class="stock-name">Apple Inc.</div>
+                    <div class="stock-symbol">AAPL</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="stock-price">$186.68</div>
+                  <div class="stock-change change-up">+2.45%</div>
+                </div>
+              </div>
+              
+              <div class="stock-item">
+                <div class="stock-info">
+                  <div class="stock-icon" style="background-color: #e3f2fd; color: var(--primary);">
+                    <span class="material-icons">show_chart</span>
+                  </div>
+                  <div>
+                    <div class="stock-name">Microsoft</div>
+                    <div class="stock-symbol">MSFT</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="stock-price">$337.41</div>
+                  <div class="stock-change change-up">+1.32%</div>
+                </div>
+              </div>
+              
+              <div class="stock-item">
+                <div class="stock-info">
+                  <div class="stock-icon" style="background-color: #fff3e0; color: var(--warning);">
+                    <span class="material-icons">show_chart</span>
+                  </div>
+                  <div>
+                    <div class="stock-name">Amazon</div>
+                    <div class="stock-symbol">AMZN</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="stock-price">$128.45</div>
+                  <div class="stock-change change-down">-0.78%</div>
+                </div>
+              </div>
+              
+              <div class="stock-item">
+                <div class="stock-info">
+                  <div class="stock-icon" style="background-color: #fce4ec; color: var(--error);">
+                    <span class="material-icons">show_chart</span>
+                  </div>
+                  <div>
+                    <div class="stock-name">Tesla</div>
+                    <div class="stock-symbol">TSLA</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="stock-price">$256.24</div>
+                  <div class="stock-change change-up">+3.21%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recent-transactions">
+          <div class="card-header">
+            <div class="card-title">Recent Transactions</div>
+            <span class="material-icons" style="color: var(--text-secondary); cursor: pointer;">more_vert</span>
+          </div>
+          <div class="transaction-list">
+            <div class="transaction-item">
+              <div class="transaction-info">
+                <div class="transaction-icon" style="background-color: var(--accent);">
+                  <span class="material-icons">arrow_downward</span>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Stock Dividend</div>
+                  <div class="transaction-date">June 15, 2025</div>
+                </div>
+              </div>
+              <div class="transaction-amount income">+$245.00</div>
+            </div>
+            
+            <div class="transaction-item">
+              <div class="transaction-info">
+                <div class="transaction-icon" style="background-color: var(--primary);">
+                  <span class="material-icons">account_balance</span>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Monthly Salary</div>
+                  <div class="transaction-date">June 10, 2025</div>
+                </div>
+              </div>
+              <div class="transaction-amount income">+$4,500.00</div>
+            </div>
+            
+            <div class="transaction-item">
+              <div class="transaction-info">
+                <div class="transaction-icon" style="background-color: var(--error);">
+                  <span class="material-icons">shopping_cart</span>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Grocery Shopping</div>
+                  <div class="transaction-date">June 8, 2025</div>
+                </div>
+              </div>
+              <div class="transaction-amount expense">-$156.78</div>
+            </div>
+            
+            <div class="transaction-item">
+              <div class="transaction-info">
+                <div class="transaction-icon" style="background-color: var(--warning);">
+                  <span class="material-icons">local_dining</span>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-title">Dinner Out</div>
+                  <div class="transaction-date">June 5, 2025</div>
+                </div>
+              </div>
+              <div class="transaction-amount expense">-$78.50</div>
+            </div>
+          </div>
+          <div class="view-all">View All Transactions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.11.0/umd/material.development.js"></script>
+  <script src="Material Ui 2 Task 2.js"></script>
+</body>
+</html>

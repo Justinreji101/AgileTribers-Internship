@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Task 1 Eagle Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mui/material@5.11.0/css/material.min.css">
+  <link rel="stylesheet" type="text/css" href="Material Ui 2 Task 1.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span class="material-icons" style="font-size: 2rem; margin-right: 12px;">dashboard</span>
+        <h2>Eagle</h2>
+      </div>
+      <div class="sidebar-menu">
+        <div class="menu-item active">
+          <span class="material-icons">dashboard</span>
+          <span>Dashboard</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">people</span>
+          <span>Users</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">shopping_cart</span>
+          <span>Products</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">assessment</span>
+          <span>Analytics</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">mail</span>
+          <span>Messages</span>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons">settings</span>
+          <span>Settings</span>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="search-bar">
+          <span class="material-icons">search</span>
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="user-actions">
+          <div class="notification-badge">
+            <span class="material-icons">notifications</span>
+            <div class="badge">3</div>
+          </div>
+          <div class="user-profile">
+            <div class="user-avatar">JR</div>
+            <span>Justin Reji</span>
+          </div>
+        </div>
+      </div>
+      <div class="content-area">
+        <h1 class="page-title">Dashboard</h1>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Total Revenue</div>
+              <div class="stat-card-icon" style="background-color: var(--success);">
+                <span class="material-icons">attach_money</span>
+              </div>
+            </div>
+            <div class="stat-card-value">$24,780</div>
+            <div class="stat-card-change change-up">
+              <span class="material-icons" style="font-size: 1rem;">arrow_upward</span>
+              <span>12% from last month</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">New Users</div>
+              <div class="stat-card-icon" style="background-color: var(--info);">
+                <span class="material-icons">person_add</span>
+              </div>
+            </div>
+            <div class="stat-card-value">1,254</div>
+            <div class="stat-card-change change-up">
+              <span class="material-icons" style="font-size: 1rem;">arrow_upward</span>
+              <span>8% from last month</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Pending Orders</div>
+              <div class="stat-card-icon" style="background-color: var(--warning);">
+                <span class="material-icons">shopping_cart</span>
+              </div>
+            </div>
+            <div class="stat-card-value">56</div>
+            <div class="stat-card-change change-down">
+              <span class="material-icons" style="font-size: 1rem;">arrow_downward</span>
+              <span>3% from last month</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-title">Active Projects</div>
+              <div class="stat-card-icon" style="background-color: var(--accent);">
+                <span class="material-icons">assignment</span>
+              </div>
+            </div>
+            <div class="stat-card-value">18</div>
+            <div class="stat-card-change change-up">
+              <span class="material-icons" style="font-size: 1rem;">arrow_upward</span>
+              <span>5% from last month</span>
+            </div>
+          </div>
+        </div>
+        <div class="charts-row">
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-title">Revenue Overview</div>
+              <div>
+                <select style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+                  <option>Last 7 days</option>
+                  <option>Last 30 days</option>
+                  <option>Last 90 days</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-container">
+              <div class="chart-placeholder">
+                <span>Revenue Chart Area</span>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-title">Traffic Sources</div>
+            </div>
+            <div class="chart-container">
+              <div class="chart-placeholder">
+                <span>Pie Chart Area</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recent-activity">
+          <div class="chart-header">
+            <div class="chart-title">Recent Activity</div>
+            <button style="background: none; border: none; color: var(--primary); cursor: pointer;">
+              View All
+            </button>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <span class="material-icons">payment</span>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">New order received (#12345)</div>
+                <div class="activity-time">2 minutes ago</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">
+                <span class="material-icons">account_circle</span>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">New user registered (john.doe@example.com)</div>
+                <div class="activity-time">15 minutes ago</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">
+                <span class="material-icons">assignment</span>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">Project "Dashboard UI" completed</div>
+                <div class="activity-time">1 hour ago</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">
+                <span class="material-icons">comment</span>
+              </div>
+              <div class="activity-content">
+                <div class="activity-title">New comment on post "Material UI Tips"</div>
+                <div class="activity-time">3 hours ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.11.0/umd/material.development.js"></script>
+  <script src="Material Ui 2 Task 1.js"></script>
+</body>
+</html>
