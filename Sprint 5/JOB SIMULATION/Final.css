@@ -1,0 +1,360 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary-color: #4361ee;
+    --primary-light: #4895ef;
+    --primary-dark: #3f37c9;
+    --secondary-color: #3a0ca3;
+    --accent-color: #7209b7;
+    --success-color: #4cc9f0;
+    --warning-color: #f8961e;
+    --error-color: #f72585;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gray-light: #e9ecef;
+    --gray-medium: #adb5bd;
+    --gray-dark: #495057;
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition-fast: all 0.15s ease;
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7ff;
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== App Container ===== */
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* ===== Header Styles ===== */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.app-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.student-counter {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.student-counter span {
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+/* ===== Card Styles ===== */
+.card {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-sm);
+    padding: 20px;
+    transition: var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--box-shadow-md);
+}
+
+/* ===== Input Section ===== */
+.input-section {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-medium);
+    font-size: 16px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius-sm);
+    font-size: 15px;
+    transition: var(--transition-fast);
+    background-color: var(--light-color);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+    background-color: white;
+}
+
+/* ===== Button Styles ===== */
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+button i {
+    font-size: 14px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.secondary-btn {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: #f5f7ff;
+}
+
+/* ===== Controls Section ===== */
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.search-group {
+    flex: 1;
+    position: relative;
+    margin-right: 15px;
+}
+
+/* ===== List Section ===== */
+.list-section {
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.student-list {
+    list-style: none;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--gray-light);
+    transition: var(--transition-fast);
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.student-item:hover {
+    background-color: #f8f9ff;
+}
+
+.student-name {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-color);
+    padding-right: 15px;
+}
+
+.student-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: var(--warning-color);
+}
+
+.edit-btn:hover {
+    background-color: #e07e0c;
+}
+
+.delete-btn {
+    background-color: var(--error-color);
+}
+
+.delete-btn:hover {
+    background-color: #e5177a;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--gray-medium);
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: var(--gray-light);
+}
+
+.empty-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ===== Footer Styles ===== */
+.app-footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 15px 0;
+    color: var(--gray-medium);
+    font-size: 13px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.student-item {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 15px;
+    }
+    
+    .controls-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-group {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    #clearAllBtn {
+        width: 100%;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-icon {
+        top: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .header-actions {
+        width: 100%;
+    }
+    
+    .student-counter {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Final Student Name List</title>
+    <link rel="stylesheet" href="Final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h1>Student Name List</h1>
+            </div>
+            <div class="header-actions">
+                <div class="student-counter">
+                    <span id="studentCount">0</span> students
+                </div>
+            </div>
+        </header>
+        
+        <main class="app-content">
+            <section class="input-section card">
+                <div class="input-group">
+                    <div class="input-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <input type="text" id="studentInput" placeholder="Enter student name..." autocomplete="off">
+                    <button id="addBtn" class="primary-btn">
+                        <i class="fas fa-plus"></i> Add
+                    </button>
+                </div>
+            </section>
+            
+            <section class="controls-section card">
+                <div class="search-group">
+                    <div class="input-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" id="searchInput" placeholder="Search students..." autocomplete="off">
+                </div>
+                <button id="clearAllBtn" class="secondary-btn">
+                    <i class="fas fa-trash-alt"></i> Clear All
+                </button>
+            </section>
+            
+            <section class="list-section card">
+                <ul id="studentList" class="student-list">
+                    <!-- Student items will be added here dynamically -->
+                </ul>
+            </section>
+        </main>
+    <script src="Final.js"></script>
+</body>
+</html>
