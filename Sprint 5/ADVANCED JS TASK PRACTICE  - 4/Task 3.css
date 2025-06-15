@@ -1,0 +1,244 @@
+:root {
+    --primary-color: #4285F4;
+    --secondary-color: #34A853;
+    --accent-color: #EA4335;
+    --dark-color: #202124;
+    --light-color: #f8f9fa;
+    --text-color: #3c4043;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f4;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+header p {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#searchButton {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#searchButton:hover {
+    background-color: #3367d6;
+    transform: translateY(-2px);
+}
+
+#showAllButton {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#showAllButton:hover {
+    background-color: #2d924a;
+    transform: translateY(-2px);
+}
+
+.filter-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.results-section, .directory-section {
+    margin-bottom: 40px;
+}
+
+.results-section h2, .directory-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 500;
+}
+
+.employee-results, .employee-directory {
+    min-height: 200px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.initial-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #5f6368;
+    text-align: center;
+    padding: 30px;
+}
+
+.initial-message i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #dadce0;
+}
+
+.employee-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.employee-card:hover {
+    transform: translateY(-5px);
+}
+
+.employee-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e8f0fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.employee-details {
+    flex: 1;
+}
+
+.employee-details h3 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.employee-details p {
+    color: #5f6368;
+    margin-bottom: 5px;
+}
+
+.employee-id {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.employee-position {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.not-found {
+    text-align: center;
+    padding: 30px;
+    color: var(--accent-color);
+}
+
+.not-found i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.employee-directory {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .employee-directory {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .employee-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .employee-details {
+        text-align: center;
+    }
+}

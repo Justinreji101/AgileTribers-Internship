@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 2 Book Finder</title>
+    <link rel="stylesheet" href="Task 2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-book-open"></i> Book Finder</h1>
+            <p>Search our library collection by title</p>
+        </header>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="bookTitleInput" placeholder="Enter book title...">
+                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="filter-section">
+                <button id="showAllButton"><i class="fas fa-list"></i> Show All Books</button>
+            </div>
+        </div>
+        
+        <div class="results-section">
+            <h2>Search Results</h2>
+            <div id="bookResults" class="book-results">
+                <!-- Results will be displayed here -->
+                <div class="initial-message">
+                    <i class="fas fa-book-reader"></i>
+                    <p>Enter a book title to begin your search</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="library-section">
+            <h2>Our Library Collection</h2>
+            <div id="libraryBooks" class="library-books">
+                <!-- Library books will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="Task 2.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 9 API Data Fetcher</title>
+    <link rel="stylesheet" href="Task 9.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-download-alt"></i> API Data Fetcher</h1>
+            <p>Fetch and display data from JSONPlaceholder API using async/await</p>
+        </header>
+        
+        <div class="controls">
+            <div class="api-selector">
+                <label for="apiEndpoint"><i class="fas fa-server"></i> Select API Endpoint:</label>
+                <select id="apiEndpoint">
+                    <option value="todos">Todos</option>
+                    <option value="posts">Posts</option>
+                    <option value="comments">Comments</option>
+                    <option value="albums">Albums</option>
+                    <option value="photos">Photos</option>
+                    <option value="users">Users</option>
+                </select>
+            </div>
+            <button id="fetchButton"><i class="fas fa-sync-alt"></i> Fetch Data</button>
+        </div>
+        
+        <div class="status-indicator">
+            <div id="statusMessage" class="status-message">
+                <i class="fas fa-info-circle"></i> Ready to fetch data
+            </div>
+            <div id="loadingIndicator" class="loading-indicator">
+                <div class="spinner"></div>
+                <span>Loading data...</span>
+            </div>
+        </div>
+        
+        <div class="result-section">
+            <h2>API Response</h2>
+            <div id="resultDisplay" class="result-display">
+                <div class="initial-message">
+                    <i class="fas fa-arrow-up"></i>
+                    <p>Click "Fetch Data" to retrieve API information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Task 9.js"></script>
+</body>
+</html>

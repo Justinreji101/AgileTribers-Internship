@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 6 Number Array Processor</title>
+    <link rel="stylesheet" href="Task 6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-square-root-alt"></i> Array Methods Processor</h1>
+            <p>Filter even numbers and square them using array methods</p>
+        </header>
+        
+        <div class="input-section">
+            <div class="input-box">
+                <input type="text" id="numberInput" placeholder="e.g. 1, 2, 3, 4, 5, 6">
+                <button id="processButton"><i class="fas fa-cogs"></i> Process Array</button>
+                <button id="randomButton"><i class="fas fa-random"></i> Random Numbers</button>
+            </div>
+        </div>
+        
+        <div class="visualization-section">
+            <div class="step-container">
+                <div class="step-box">
+                    <h3>Original Array</h3>
+                    <div id="originalArray" class="array-display"></div>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-box">
+                    <h3>Even Numbers</h3>
+                    <div id="evenArray" class="array-display"></div>
+                </div>
+                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step-box">
+                    <h3>Squared Evens</h3>
+                    <div id="resultArray" class="array-display"></div>
+                </div>
+            </div>
+        </div>
+        <div class="animation-container">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </div>
+    
+    <script src="Task 6.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 10 Product Price Analyzer</title>
+    <link rel="stylesheet" href="Task 10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calculator"></i> Product Price Analyzer</h1>
+            <p>Calculate total price and find products above average using array methods</p>
+        </header>
+        
+        <div class="product-inputs">
+            <div class="product-form" id="productForm">
+                <div class="product-row">
+                    <input type="text" class="product-name" placeholder="Product name">
+                    <input type="number" class="product-price" placeholder="Price" min="0" step="0.01">
+                    <button class="remove-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="form-controls">
+                <button id="addProductBtn"><i class="fas fa-plus"></i> Add Product</button>
+                <button id="calculateBtn"><i class="fas fa-calculator"></i> Calculate</button>
+                <button id="exampleBtn"><i class="fas fa-lightbulb"></i> Load Example</button>
+            </div>
+        </div>
+        
+        <div class="results-section">
+            <div class="result-card">
+                <h3><i class="fas fa-receipt"></i> Total Price</h3>
+                <div id="totalPrice" class="result-value">$0.00</div>
+            </div>
+            <div class="result-card">
+                <h3><i class="fas fa-chart-line"></i> Average Price</h3>
+                <div id="averagePrice" class="result-value">$0.00</div>
+            </div>
+            <div class="result-card full-width">
+                <h3><i class="fas fa-star"></i> Products Above Average</h3>
+                <div id="aboveAverageProducts" class="products-list">
+                    <div class="empty-message">No products analyzed yet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Task 10.js"></script>
+</body>
+</html>
