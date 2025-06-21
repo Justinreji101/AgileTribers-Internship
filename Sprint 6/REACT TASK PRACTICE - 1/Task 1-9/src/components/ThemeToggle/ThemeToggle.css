@@ -1,0 +1,36 @@
+/* Light Theme (Default) */
+.light-theme {
+  background-color: #ffffff;
+  color: #333333;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.theme-container {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.theme-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: #357ab8;
+}
