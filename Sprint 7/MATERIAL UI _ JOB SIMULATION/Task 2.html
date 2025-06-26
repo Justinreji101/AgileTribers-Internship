@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="Task 2.css">
+    <title>Analytics Dashboard</title>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- App Bar -->
+        <header class="app-bar">
+            <button class="app-bar-icon">
+                <span class="material-icons">menu</span>
+            </button>
+            <h1 class="app-bar-title">Analytics Dashboard</h1>
+            <button class="app-bar-icon">
+                <span class="material-icons">notifications</span>
+            </button>
+            <button class="app-bar-icon">
+                <span class="material-icons">account_circle</span>
+            </button>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="grid-container">
+                <!-- Summary Cards -->
+                <div class="grid-item grid-item-md-3 stat-card">
+                    <div class="stat-card-title">Total Revenue</div>
+                    <div class="stat-card-value">$48,234</div>
+                    <div class="stat-card-trend trend-up">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>12% vs last month</span>
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-md-3 stat-card">
+                    <div class="stat-card-title">New Users</div>
+                    <div class="stat-card-value">1,254</div>
+                    <div class="stat-card-trend trend-up">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>8% vs last month</span>
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-md-3 stat-card">
+                    <div class="stat-card-title">Expenses</div>
+                    <div class="stat-card-value">$12,345</div>
+                    <div class="stat-card-trend trend-down">
+                        <span class="material-icons">arrow_downward</span>
+                        <span>3% vs last month</span>
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-md-3 stat-card">
+                    <div class="stat-card-title">Profit</div>
+                    <div class="stat-card-value">$35,889</div>
+                    <div class="stat-card-trend trend-up">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>15% vs last month</span>
+                    </div>
+                </div>
+                
+                <!-- Main Chart -->
+                <div class="grid-item grid-item-md-8 gradient-card">
+                    <div class="gradient-card-title">
+                        <h2>Revenue Overview</h2>
+                        <div class="tabs">
+                            <div class="tab active">
+                                <span class="material-icons tab-icon">equalizer</span>
+                                Monthly
+                            </div>
+                            <div class="tab">
+                                <span class="material-icons tab-icon">show_chart</span>
+                                Quarterly
+                            </div>
+                            <div class="tab">
+                                <span class="material-icons tab-icon">bar_chart</span>
+                                Yearly
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Pie Chart -->
+                <div class="grid-item grid-item-md-4">
+                    <h2>Product Distribution</h2>
+                    <div class="chart-container">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Stock Cards Title -->
+                <div class="grid-item">
+                    <h2>Market Trends</h2>
+                </div>
+                
+                <!-- Stock Cards -->
+                <div class="grid-item grid-item-sm-6 grid-item-md-3 stock-card">
+                    <div class="stock-header">
+                        <div class="stock-name">TechCorp</div>
+                        <span class="material-icons trend-up">trending_up</span>
+                    </div>
+                    <div class="stock-value">$245.67</div>
+                    <div class="stat-card-trend trend-up">
+                        +12.34 (5.3%)
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-sm-6 grid-item-md-3 stock-card">
+                    <div class="stock-header">
+                        <div class="stock-name">FinGroup</div>
+                        <span class="material-icons trend-down">trending_down</span>
+                    </div>
+                    <div class="stock-value">$189.23</div>
+                    <div class="stat-card-trend trend-down">
+                        -8.76 (-4.4%)
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-sm-6 grid-item-md-3 stock-card">
+                    <div class="stock-header">
+                        <div class="stock-name">RetailCo</div>
+                        <span class="material-icons trend-up">trending_up</span>
+                    </div>
+                    <div class="stock-value">$78.45</div>
+                    <div class="stat-card-trend trend-up">
+                        +3.21 (4.2%)
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-sm-6 grid-item-md-3 stock-card">
+                    <div class="stock-header">
+                        <div class="stock-name">EnergyInc</div>
+                        <span class="material-icons trend-down">trending_down</span>
+                    </div>
+                    <div class="stock-value">$112.89</div>
+                    <div class="stat-card-trend trend-down">
+                        -2.34 (-2.0%)
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="grid-item grid-item-md-6">
+                    <h2>Recent Activity</h2>
+                    <div>
+                        <div class="activity-item">
+                            <div class="activity-bullet"></div>
+                            <div>New order #1234 received</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-bullet"></div>
+                            <div>Payment of $2345 processed</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-bullet"></div>
+                            <div>User registration completed</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-bullet"></div>
+                            <div>System maintenance scheduled</div>
+                        </div>
+                        <div class="activity-item" style="border-bottom: none;">
+                            <div class="activity-bullet"></div>
+                            <div>New product added to inventory</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Performance Metrics -->
+                <div class="grid-item grid-item-md-6">
+                    <h2>Performance Metrics</h2>
+                    <div class="grid-container" style="gap: 16px;">
+                        <div class="grid-item grid-item-sm-6">
+                            <div class="stat-card-title">Conversion Rate</div>
+                            <div class="stat-card-value">3.2%</div>
+                            <div class="progress-container">
+                                <div class="progress-bar progress-primary" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item grid-item-sm-6">
+                            <div class="stat-card-title">Bounce Rate</div>
+                            <div class="stat-card-value">42%</div>
+                            <div class="progress-container">
+                                <div class="progress-bar progress-error" style="width: 42%;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item grid-item-sm-6">
+                            <div class="stat-card-title">Avg. Session</div>
+                            <div class="stat-card-value">2m 45s</div>
+                            <div class="progress-container">
+                                <div class="progress-bar progress-warning" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item grid-item-sm-6">
+                            <div class="stat-card-title">Pages/Session</div>
+                            <div class="stat-card-value">3.8</div>
+                            <div class="progress-container">
+                                <div class="progress-bar progress-success" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Task 2.js"></script>
+</body>
+</html>

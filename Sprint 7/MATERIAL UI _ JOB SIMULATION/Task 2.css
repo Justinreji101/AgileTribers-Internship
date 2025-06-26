@@ -1,0 +1,265 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        /* App Layout */
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* App Bar */
+        .app-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background-color: #3f51b5;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .app-bar-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-left: 16px;
+            flex-grow: 1;
+        }
+        
+        .app-bar-icon {
+            color: white;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: background-color 0.3s;
+        }
+        
+        .app-bar-icon:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 24px;
+            margin-top: 64px;
+        }
+        
+        /* Grid System */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        
+        .grid-item {
+            grid-column: span 12;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .grid-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+        }
+        
+        /* Stat Cards */
+        .stat-card {
+            border-left: 4px solid #3f51b5;
+            padding: 16px;
+        }
+        
+        .stat-card-title {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .stat-card-value {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .stat-card-trend {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+        }
+        
+        .trend-up {
+            color: #4caf50;
+        }
+        
+        .trend-down {
+            color: #f44336;
+        }
+        
+        /* Gradient Card */
+        .gradient-card {
+            background: linear-gradient(135deg, #3f51b5 0%, #f50057 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            padding: 16px;
+        }
+        
+        .gradient-card-title {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Tabs */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .tab {
+            padding: 8px 16px;
+            cursor: pointer;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tab.active {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+        
+        .tab-icon {
+            margin-right: 8px;
+            font-size: 1rem;
+        }
+        
+        /* Chart Container */
+        .chart-container {
+            height: 300px;
+            margin-top: 16px;
+            position: relative;
+        }
+        
+        /* Stock Cards */
+        .stock-card {
+            padding: 16px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .stock-name {
+            font-weight: 500;
+        }
+        
+        .stock-value {
+            font-size: 1.25rem;
+            margin: 8px 0;
+        }
+        
+        /* Activity List */
+        .activity-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .activity-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #3f51b5;
+            margin-right: 16px;
+        }
+        
+        /* Progress Bars */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+        }
+        
+        .progress-primary {
+            background-color: #3f51b5;
+        }
+        
+        .progress-error {
+            background-color: #f44336;
+        }
+        
+        .progress-warning {
+            background-color: #ff9800;
+        }
+        
+        .progress-success {
+            background-color: #4caf50;
+        }
+        
+        /* Responsive Grid */
+        @media (min-width: 600px) {
+            .grid-item-sm-6 {
+                grid-column: span 6;
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .grid-item-md-3 {
+                grid-column: span 3;
+            }
+            
+            .grid-item-md-4 {
+                grid-column: span 4;
+            }
+            
+            .grid-item-md-6 {
+                grid-column: span 6;
+            }
+            
+            .grid-item-md-8 {
+                grid-column: span 8;
+            }
+        }
