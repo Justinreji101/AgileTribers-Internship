@@ -1,0 +1,17 @@
+.about {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.about h1 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  color: #34495e;
+  font-size: 1.2rem;
+}
