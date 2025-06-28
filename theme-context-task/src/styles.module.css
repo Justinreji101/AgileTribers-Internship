@@ -1,0 +1,56 @@
+/* Theme variables */
+:root {
+  --transition-speed: 0.3s;
+}
+
+/* Base styles */
+.app {
+  transition: all var(--transition-speed) ease;
+}
+
+/* Light Theme */
+.light {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --button-bg: #e9ecef;
+  --button-text: #495057;
+}
+
+/* Dark Theme */
+.dark {
+  --bg-color: #212529;
+  --text-color: #f8f9fa;
+  --button-bg: #343a40;
+  --button-text: #e9ecef;
+}
+
+/* Components */
+.content {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: inherit;
+}
+
+.toggleBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: inherit;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.toggleBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
